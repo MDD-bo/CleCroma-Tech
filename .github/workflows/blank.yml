@@ -39,12 +39,12 @@ jobs:
         run: npm run build:prod
 
       - name: Create 404.html for SPA routing
-        run: cp dist/clecroma/index.html dist/clecroma/404.html
+        run: cp dist/clecroma/browser/index.html dist/clecroma/browser/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "dist/clecroma"
+          path: "dist/clecroma/browser"
 
       - name: Deploy to GitHub Pages
         id: deployment
