@@ -34,10 +34,10 @@ jobs:
       - name: build
         run: npm run build:prod
       - name: redirigir
-        run: mv dist/clecroma-tech/index.html dist/clecroma-tech/404.html
+        run: mv dist/clecroma/index.html dist/clecroma/404.html
       - name: desplegar github pages
         uses: crazy-max/ghaction-github-pages@v5.0.0
         with: 
-         build_dir: dist/clecroma-tech
+         build_dir: dist/clecroma
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
